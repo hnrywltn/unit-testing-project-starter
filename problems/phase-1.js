@@ -1,11 +1,9 @@
 /*1. Is Five Define a function isFive that will return true if a number is equal
    to 5 and false if it is not.
 */
-function isFive(num) {
- if (num === 5) {
-   return 5;
- }
-}
+let isFive = (num) => num === 5;
+
+
 
 /*2. Is Odd Write a function isOdd that takes in a number as an argument and
    returns true if the number is odd and returns false otherwise.
@@ -25,13 +23,13 @@ function isOdd(number) {
 function myRange(min, max, step=1) {
   const array = []
   for (let i = min; i <= max; i++) {
-    array.push(i);  
+    array.push(i);
   }
   return array
 }
 /*4. Fizz Buzz Define a function fizzBuzz(max) that takes a number and prints
    every number from 0 to max (not inclusive) that is divisible by either 3 or
-   5, but not both. 
+   5, but not both.
 */
 
 function fizzBuzz(max) {
