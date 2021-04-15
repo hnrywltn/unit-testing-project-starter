@@ -73,26 +73,30 @@ describe("myRange(min, max, step)", () => {
       //Arrange
 
       //Act
-
+      let expected = [1, 3, 5]
+      let actual = myRange(1, 5, 2)
       // Assert
-      expect.fail('Remove this expect.fail and replace it with your test');
+      expect(actual).to.eql(expected)
+
 
     });
   });
   it("should throw an error if num is not type of Number", () => {
     //Arrange
-
+    let input = 'barrel';
     //Act
-
+    let expected = TypeError;
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
+    let actual = () => myRange(input);
+    expect(actual).to.throw(expected);
+
 
   });
 });
 describe('fizzBuzz(max)', ()=> {
   it('should throw a RangeError if max < 0', ()=> {
     //Arrange
-
+      
     //Act
 
     //Assert
