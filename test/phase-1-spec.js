@@ -57,10 +57,14 @@ describe("myRange(min, max, step)", () => {
     it("should return the correct array with default value step=1", () => {
       //Arrange
 
-      //Act
 
+      //Act
+      let expected = [1, 2, 3, 4, 5]
       // Assert
-      expect.fail('Remove this expect.fail and replace it with your test');
+      let actual = myRange(1, 5)
+      expect(actual).to.eql(expected)
+
+      // expect.fail('Remove this expect.fail and replace it with your test');
 
     });
   });

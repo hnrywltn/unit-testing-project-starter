@@ -23,9 +23,9 @@ let isOdd = number => {
       numbers between and inclusive of min and max at step intervals.
 */
 
-function myRange(min, max, step=1) {
+function myRange(min, max, step = 1) {
   const array = []
-  for (let i = min; i <= max; i++) {
+  for (let i = min; i <= max; i += step) {
     array.push(i);
   }
   return array
