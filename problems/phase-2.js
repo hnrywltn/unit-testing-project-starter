@@ -37,9 +37,7 @@ Do not use the built in Array#map - use Array#forEach for iteration.
 */
 const myMap = (array, cb) => {
   let mapped = [];
-  array.forEach((el) => {
-    mapped.push(cb(el))
-  });
+  array.forEach((el) => mapped.push(cb(el)));
   return mapped;
 };
 

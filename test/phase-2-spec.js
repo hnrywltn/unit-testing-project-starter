@@ -40,7 +40,13 @@ describe('myMap', function () {
   });
 
   it("should not call the built in Array#map", function () {
-    let myMapSpy = chai.spy.on(Array.map)
+      let double = (num) => {
+        return num * 2
+      };
+    let myMapSpy = chai.spy.on(Array.prototype, "map")
+    let actual = myMap([1, 2, 3], double);
+    myMap([1, 2, 3], double);
+    expect(myMapSpy).to.not.have.been.called();
   });
 })
 
