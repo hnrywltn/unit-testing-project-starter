@@ -9,10 +9,10 @@ let isFive = (num) => num === 5;
    returns true if the number is odd and returns false otherwise.
 */
 let isOdd = number => {
-  if(typeof number !== 'number') {
-    throw new TypeError('enter a number');
-   } else {
-     return !!(number % 2);
+  if (typeof number !== 'number') {
+    throw new TypeError('enter a number'); // throw is a return word
+  } else {
+    return !!(number % 2);
   };
 };
 
@@ -22,46 +22,41 @@ let isOdd = number => {
       3 numbers as parameters. The function should return an array of the
       numbers between and inclusive of min and max at step intervals.
 */
-let min;
-let max;
+
 
 function myRange(min, max, step = 1) {
   const array = []
-
   if(typeof min !== 'number' || typeof max !== 'number') {
     throw new TypeError();
   }
-  
+
   for (let i = min; i <= max; i += step) {
     array.push(i);
   }
   return array
 }
-
-
 /*4. Fizz Buzz Define a function fizzBuzz(max) that takes a number and prints
    every number from 0 to max (not inclusive) that is divisible by either 3 or
    5, but not both.
 */
 
 function fizzBuzz(max) {
-  if (typeof max !== 'number' ){
-    throw TypeError('needs to be a number')
+  if (typeof max !== 'number') {
+    throw new TypeError('needs to be a number')
   }
-  if (max < 0){
-    throw new Error
+  if (max < 0) {
+    throw new RangeError('enter pos num')
   }
 
   const array = []
-  for (let i = 0; i < max; i += 1) {
-    if (i % 3 === 0 || i % 5 !== 0) {
-      array.push(i);
-    } else if (i % 5 === 0 || i % 3 !== 0) {
+  for (let i = 0; i < max; i++) {
+    if ((i % 3 === 0 || i % 5 === 0) && !(i % 3 === 0 && i % 5 === 0)) {
       array.push(i);
     }
   }
+  console.log(...array);
   return array
 }
+console.log(fizzBuzz(50))
 
-
-module.exports = {isFive, isOdd, myRange, fizzBuzz }
+module.exports = { isFive, isOdd, myRange, fizzBuzz }
