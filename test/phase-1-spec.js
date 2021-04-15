@@ -21,32 +21,37 @@ describe("isFive(num)", () => {
 describe("isOdd(number)", () => {
   it("should return true if number is odd", () => {
     //Arrange
-
+    let input = 3;
     //Act
-
+    let expected = true;
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
-
+    let actual = isOdd(input);
+    expect(actual).to.equal(expected);
   });
   it("should return false if the num is even", () => {
     //Arrange
-
+    let input = 2;
     //Act
-
+    let expected = false;
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
-
+    let actual = isOdd(input);
+    expect(actual).to.equal(expected);
   });
   it("should throw an error if num is not type of Number", () => {
     //Arrange
-
+    let input = 'fish';
     //Act
-
+    let expected = TypeError;
     //Assert
-    expect.fail('Remove this expect.fail and replace it with your test');
-
+    let actual = () => isOdd(input);
+    expect(actual).to.throw(expected);
   });
 });
+
+
+
+
+
 describe("myRange(min, max, step)", () => {
   context("if step is not provided", () => {
     it("should return the correct array with default value step=1", () => {

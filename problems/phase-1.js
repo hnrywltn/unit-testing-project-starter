@@ -8,12 +8,15 @@ let isFive = (num) => num === 5;
 /*2. Is Odd Write a function isOdd that takes in a number as an argument and
    returns true if the number is odd and returns false otherwise.
 */
-function isOdd(number) {
-  if (typeof number !== 'number'){
-    throw Error('some error')
-  }
-  return (number % 2 === 0);
-}
+let isOdd = number => {
+  if(typeof number !== 'number') {
+    throw new TypeError('enter a number');
+   } else {
+     return !!(number % 2);
+  };
+};
+
+
 
 /*3. Array  of the Range Write a function myRange(min, max, step) that takes in
       3 numbers as parameters. The function should return an array of the
